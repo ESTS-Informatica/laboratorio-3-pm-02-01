@@ -5,7 +5,7 @@
  * @author POO
  */
 
-public class Transport {
+public class Transport extends AppStart {
 
     private static int auto = 0; 
 
