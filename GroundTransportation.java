@@ -16,7 +16,6 @@ public class GroundTransportation extends Transport
     }
     
         public String getLicencePlate(){
-    
         return this.licensePlate;
     }
     
@@ -25,6 +24,31 @@ public class GroundTransportation extends Transport
     
         this.licensePlate = licensePlate;
         
+    }
+    
+    @Override
+        public double getPriceWithFees() {     
+        return super.getPrice() * (1.0 +  honorarios);
+    }
+    
+        @Override
+        public String getTransportType() {
+        return "Transporte Terrestre";
+    }
+    
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("\n%15s: %s\n", "Tipo Transporte", getTransportType()));  
+        sb.append(String.format("%15s: %s\n", "ID", super.getId()));
+        sb.append(String.format("%15s: %s\n", "Origem", super.getOrigin()));
+        sb.append(String.format("%15s: %s\n", "Destino",super.getDestination()));
+        sb.append(String.format("%15s: %5.2f€\n", "Preço", super.getPrice()));
+        sb.append(String.format("%15s: %4.2f%%\n", "Honorarios", this.honorarios));
+        sb.append(String.format("%15s: %4.2f€\n", "Preço Final", getPriceWithFees()));
+     
+        return sb.toString();
     }
     
     

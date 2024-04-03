@@ -12,7 +12,7 @@ public class Transport {
     private final String id;
     private String origin;
     private String destination;
-    public double price;
+    private double price;
     private double fees;
     private boolean available;
 
