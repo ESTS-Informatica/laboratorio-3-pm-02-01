@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 public class AirTransportationTest {
 
-    private AirTransportation airTransport;
+    private AirTransportationTest airTransport;
 
     @BeforeEach
     public void setUp() {
