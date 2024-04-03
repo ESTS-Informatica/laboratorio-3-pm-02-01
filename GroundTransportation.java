@@ -15,6 +15,18 @@ public class GroundTransportation extends Transport
       
     }
     
+        public String getLicencePlate(){
+    
+        return this.licensePlate;
+    }
+    
+    
+    public void setLicencePlate(String licencePlate){
+    
+        this.licensePlate = licensePlate;
+        
+    }
+    
     
 
 }
