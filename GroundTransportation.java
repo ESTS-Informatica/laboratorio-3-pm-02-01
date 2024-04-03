@@ -10,10 +10,24 @@ public class GroundTransportation extends Transport
     private String licensePlate;
     private double honorarios = 0.03;
     
-    public GroundTransportation(String licencePlate)
+    public GroundTransportation()
     {
-      
+      this.licensePlate = licensePlate;
     }
+    
+    
+      public double getHonorarios(){
+        return this.honorarios;
+    }
+    
+    
+    public void setHonorarios(double honorarios){
+    
+        this.honorarios = honorarios;
+        
+    }
+    
+    
     
         public String getLicencePlate(){
         return this.licensePlate;
@@ -45,7 +59,7 @@ public class GroundTransportation extends Transport
         sb.append(String.format("%15s: %s\n", "Origem", super.getOrigin()));
         sb.append(String.format("%15s: %s\n", "Destino",super.getDestination()));
         sb.append(String.format("%15s: %5.2f€\n", "Preço", super.getPrice()));
-        sb.append(String.format("%15s: %4.2f%%\n", "Honorarios", this.honorarios));
+        sb.append(String.format("%15s: %4.2f%%\n", "Honorarios", getHonorarios()));
         sb.append(String.format("%15s: %4.2f€\n", "Preço Final", getPriceWithFees()));
      
         return sb.toString();
